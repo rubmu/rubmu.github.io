@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Elements / Equipment description"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Equipment description"
 description              : &description "⚛⚗ A WebApp which displays the qr-code equipment description"
 url                      : https://rubmu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
