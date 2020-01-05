@@ -7,17 +7,24 @@
             "toc": false
         },
         {
-            "text": "Notebook",
-            "target": "_vnote.json",
-            "navi": true
-        }
+            "text": "Documentation",
+            "target": "notes/_vnote.json",
+            "navi": true,
+            "navi_index": "Users/Welcome.md"
+        },
+             {
+            "text": "Documentation",
+            "target": "notes/efk/_vnote.json",
+            "navi": true,
+            "navi_index": "Users/Welcome.md"
+        },
     ],
     "actions":
     [
         {
-            "text": "Viki",
-            "icon": "css/viki_white.svg",
-            "target": "https://rubmu.github.io/viki/"
+            "text": "GitHub",
+            "icon": "css/github.svg",
+            "target": "https://github.com/rubmu/viki"
         }
     ]
 }
