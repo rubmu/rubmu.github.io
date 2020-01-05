@@ -7,14 +7,26 @@
             "toc": false
         },
         {
-            "text": "Documentation",
+            "text": "Equipment description",
             "target": "notes/_vnote.json",
             "navi": true,
             "navi_index": "Users/Welcome.md"
         },
-             {
-            "text": "Documentation",
+        {
+            "text": "СКЦ",
+            "target": "notes/skc/_vnote.json",
+            "navi": true,
+            "navi_index": "Users/Welcome.md"
+        },
+        {
+            "text": "ЭФК",
             "target": "notes/efk/_vnote.json",
+            "navi": true,
+            "navi_index": "Users/Welcome.md"
+        },
+        {
+            "text": "ЦСМУ",
+            "target": "notes/csmu/_vnote.json",
             "navi": true,
             "navi_index": "Users/Welcome.md"
         },
