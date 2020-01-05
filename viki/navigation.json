@@ -10,26 +10,8 @@
             "text": "Equipment description",
             "target": "docs/_vnote.json",
             "navi": true,
-            "navi_index": "docs/Welcome.md"
-        },
-        {
-            "text": "СКЦ",
-            "target": "docs/skc/_vnote.json",
-            "navi": true,
             "navi_index": "docs/skc/Welcome.md"
-        },
-        {
-            "text": "ЭФК",
-            "target": "docs/efk/_vnote.json",
-            "navi": true,
-            "navi_index": "docs/efk/Welcome.md"
-        },
-        {
-            "text": "ЦСМУ",
-            "target": "docs/csmu/_vnote.json",
-            "navi": true,
-            "navi_index": "docs/csmu/Welcome.md"
-        },
+        }
     ],
     "actions":
     [
