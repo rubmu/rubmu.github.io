@@ -8,27 +8,27 @@
         },
         {
             "text": "Equipment description",
-            "target": "notes/_vnote.json",
+            "target": "docs/_vnote.json",
             "navi": true,
-            "navi_index": "Users/Welcome.md"
+            "navi_index": "docs/Welcome.md"
         },
         {
             "text": "СКЦ",
-            "target": "notes/skc/_vnote.json",
+            "target": "docs/skc/_vnote.json",
             "navi": true,
-            "navi_index": "Users/Welcome.md"
+            "navi_index": "docs/skc/Welcome.md"
         },
         {
             "text": "ЭФК",
-            "target": "notes/efk/_vnote.json",
+            "target": "docs/efk/_vnote.json",
             "navi": true,
-            "navi_index": "Users/Welcome.md"
+            "navi_index": "docs/efk/Welcome.md"
         },
         {
             "text": "ЦСМУ",
-            "target": "notes/csmu/_vnote.json",
+            "target": "docs/csmu/_vnote.json",
             "navi": true,
-            "navi_index": "Users/Welcome.md"
+            "navi_index": "docs/csmu/Welcome.md"
         },
     ],
     "actions":
