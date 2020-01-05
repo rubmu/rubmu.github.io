@@ -5,6 +5,7 @@ permalink: /talks/
 author_profile: true
 ---
 
+{% if site.talkmap_link == true %}
 <div class="c-summary">
   <p>
     I love conference and meetups. I generally speak about <code>python</code>,
@@ -17,64 +18,6 @@ author_profile: true
 
   <p>I made <b>{{ site.talks.size }}</b> talks total.</p>
 </div>
-<section class="c-archives">
-  <link rel="shortcut icon" href="">
-
-  {% if page.future_talks %}
-  <h2 class="c-archives__year" id="upcoming-ref">Upcoming</h2>
-  {% for talk in page.future_talks  %}
-    <li class="c-archives__item">
-      <h3>
-        <a href="{{ talk.url }}">{{ talk.title }}</a>
-      </h3>
-      <p>
-        {{ talk.date | date: "%b %-d, %Y" }}
-        <small>
-          {{ talk.conference }} :{{ talk.language }}:
-        </small>
-      </p>
-    </li>
-  {% endfor %}
-  {% endif %}
-
-  {% assign sorted_talks = site.talks | reverse %}
-  {% for talk in sorted_talks  %}
-    {% capture this_year %}{{ talk.date | date: "%Y" }}{% endcapture %}
-    {% capture next_year %}{{ talk.previous.date | date: "%Y" }}{% endcapture %}
-
-    {% if forloop.first %}
-      <h2 class="c-archives__year" id="{{ this_year }}-ref">{{ this_year }}</h2>
-      <ul class="c-archives__list">
-    {% endif %}
-    <li class="c-archives__item">
-      <h3>
-        <a href="{{ talk.url | prepend: site.baseurl }}">{{ talk.title }}</a>
-      </h3>
-      <p>
-        {{ talk.date | date: "%b %-d, %Y" }}
-        <small>
-          {{ talk.conference }} :{{ talk.language }}:
-        </small>
-      </p>
-    </li>
-    {% if forloop.last %}
-      </ul>
-    {% else %}
-      {% if this_year != next_year %}
-        </ul>
-
-        <h2 class="c-archives__year" id="{{ next_year }}-ref">
-          {{ next_year }}
-        </h2>
-        <ul class="c-archives__list">
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-</section>
---------
-
-{% if site.talkmap_link == true %}
-
 <p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
 
 {% endif %}
