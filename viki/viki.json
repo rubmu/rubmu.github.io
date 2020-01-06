@@ -1,7 +1,8 @@
 {
     "brand": "viki",
+    "brand_icon": "css/viki_white.svg",
     "title": "Viki - A simple Wiki page in Markdown from notebook of VNote",
-    "favicon": "https://github.com/rubmu/viki/raw/master/resources/viki.ico",
+    "favicon": "https://github.com/tamlok/viki/raw/master/resources/viki.ico",
     "footer": "",
     "show_suffix": false,
     "load_before_search": true,
@@ -9,7 +10,7 @@
     "markdown":
     {
         "html": true,
-        "breaks": true,
+        "breaks": false,
         "linkify": false,
         "typographer": false,
         "lang_prefix": "lang-",
