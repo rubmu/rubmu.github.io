@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Elements / Equipment description"
+title                    : "EuroChem / BMU"
 title_separator          : "-"
-name                     : &name "Equipment description"
+name                     : &name "Chemical industry"
 description              : &description "⚛⚗ A WebApp which displays the qr-code equipment description"
 url                      : https://rubmu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -17,7 +17,7 @@ repository               : "rubmu/rubmu.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false #true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : true #change to true to add link to talkmap on talks page
 comments:
@@ -83,9 +83,9 @@ author:
   name             : "ООО ЕвроХим-БМУ"
   avatar           : "profile.png"
   bio              : "since 1977/07/09"
-  location         : "https://goo.gl/maps/bUmuMDanjPvawNAA7"
+  location         : "Kuban"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.ru/citations?view_op=list_works&hl=ru&user=nq9uJLwAAAAJ"
   email            : "rubmu23@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -97,24 +97,24 @@ author:
   facebook         :
   foursquare       :
   github           : "rubmu"
-  google_plus      :
+  google_plus      : "https://goo.gl/maps/bUmuMDanjPvawNAA7"
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : #"replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
   youtube          :
-  wikipedia        :
+  wikipedia        : ""https://rubmu.github.io/git-wiki""
 
 
 # Reading Files
@@ -255,7 +255,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Moscow # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
