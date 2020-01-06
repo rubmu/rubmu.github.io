@@ -23,7 +23,7 @@
             "text": "Documentation",
             "target": "docs/_vnote.json",
             "navi": true,
-            "navi_index": "csmu/Welcome.md"
+            "navi_index": "SKC/Welcome.md"
         },
         {
             "text": "Examples",
