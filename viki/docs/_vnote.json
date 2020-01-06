@@ -8,9 +8,6 @@
     "sub_directories": [
         {
             "name": "Users"
-        },
-        {
-            "name": "Developers"
         }
     ],
     "tags": [
