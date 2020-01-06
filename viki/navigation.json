@@ -7,17 +7,35 @@
             "toc": false
         },
         {
-            "text": "Notebook",
+            "text": "Get Started",
+            "target": "get_started.md"
+        },
+        {
+            "text": "Downloads",
+            "target": "downloads.md",
+            "toc": false
+        },
+        {
+            "text": "Markdown",
+            "target": "markdown.md"
+        },
+        {
+            "text": "Documentation",
             "target": "docs/_vnote.json",
-            "navi": true
+            "navi": true,
+            "navi_index": "Users/Welcome.md"
+        },
+        {
+            "text": "Examples",
+            "target": "examples.md"
         }
     ],
     "actions":
     [
         {
-            "text": "Viki",
-            "icon": "css/viki_white.svg",
-            "target": "https://rubmu.github.io/viki/"
+            "text": "GitHub",
+            "icon": "css/github.svg",
+            "target": "https://github.com/tamlok/viki"
         }
     ]
 }
