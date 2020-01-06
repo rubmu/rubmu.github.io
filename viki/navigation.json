@@ -23,7 +23,7 @@
             "text": "Documentation",
             "target": "docs/_vnote.json",
             "navi": true,
-            "navi_index": "SKC/Welcome.md"
+            "navi_index": "skc/Welcome.md"
         },
         {
             "text": "Examples",
