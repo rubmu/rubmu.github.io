@@ -1,10 +1,6 @@
-/* ==========================================================================
-   NAVIGATION
-   ========================================================================== */
+/* NAVIGATION */
 
-/*
-   Breadcrumb navigation links
-   ========================================================================== */
+/* Breadcrumb navigation links */
 
 .breadcrumbs {
   @include container;
@@ -52,9 +48,7 @@
 }
 
 
-/*
-   Post pagination navigation links
-   ========================================================================== */
+/* Post pagination navigation links */
 
 .pagination {
   @include full();
@@ -168,9 +162,7 @@
 }
 
 
-/*
-   Priority plus navigation
-   ========================================================================== */
+/* Priority plus navigation */
 
 .greedy-nav {
   position: relative;
@@ -309,9 +301,7 @@
 }
 
 
-/*
-   Navigation list
-   ========================================================================== */
+/* Navigation list */
 
 .nav__list {
   font-size: 1.25rem;
@@ -365,9 +355,7 @@
 }
 
 
-/*
-   Table of contents navigation
-   ========================================================================== */
+/* Table of contents navigation */
 
 .toc {
   font-family: $sans-serif-narrow;
