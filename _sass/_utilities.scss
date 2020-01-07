@@ -260,7 +260,7 @@ body:hover .visually-hidden button {
 
   .fa-twitter,
   .fa-twitter-square {
-    color: $twitter-color;
+    color: $info-color;
   }
 
   .fa-vimeo,
@@ -281,6 +281,26 @@ body:hover .visually-hidden button {
   .fa-xing,
   .fa-xing-square {
     color: $xing-color;
+  }
+
+  .fa-map-marker-alt {
+    color: $info-color
+  }
+
+  .fa-envelope {
+    color: $info-color
+  }
+
+  .fa-bitbucket {
+    color: $info-color
+  }
+
+  .fa-github {
+    color: $info-color
+  }
+
+  .fa-spotify {
+    color: $info-color
   }
 }
 
