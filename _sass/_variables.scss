@@ -1,10 +1,6 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
+/* Variables */
 
-/*
-   Typography
-   ========================================================================== */
+/* Typography */
 
 $doc-font-size              : 16;
 
@@ -57,9 +53,7 @@ $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
 
-/*
-   Colors
-   ========================================================================== */
+/* Colors */
 
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
@@ -78,7 +72,7 @@ $primary-color              : #7a8288;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+$info-color                 : #04b01b;
 $grigala-green              : #008800;
 
 /* brands */
@@ -106,10 +100,10 @@ $xing-color                 : #006567;
 
 /* links */
 $link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
+$link-color-hover           : mix(#000, $success-color, 25%);
 $link-color-visited         : mix(#fff, $link-color, 25%);
 $masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
+$masthead-link-color-hover  : mix(#000, $success-color, 25%);
 
 
 /*
