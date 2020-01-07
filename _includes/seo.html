@@ -7,7 +7,9 @@
 {% assign seo_url = seo_url | default: site.github.url %}
 
 {% if page.title %}
-  {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
+  {% unless page.title == "George Grigalashvili" %}
+    {% assign seo_title = page.title| append: " " | append: site.title_separator | append: " " | append: site.title %}
+  {%endunless%}
 {% endif %}
 
 {% if seo_title %}
