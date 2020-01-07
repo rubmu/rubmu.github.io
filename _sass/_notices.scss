@@ -44,10 +44,10 @@
   }
 
   a {
-    color: $notice-color;
+    color: $info-color;
 
     &:hover {
-      color: mix(#000, $notice-color, 40%);
+      color: $grigala-green;
     }
   }
 
@@ -71,7 +71,7 @@
 /* Primary notice */
 
 .notice--primary {
-  @include notice($primary-color);
+  @include notice($info-color);
 }
 
 /* Info notice */
