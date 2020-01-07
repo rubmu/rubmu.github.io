@@ -88,7 +88,7 @@ author:
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.ru/citations?view_op=list_works&hl=ru&user=nq9uJLwAAAAJ"
   email            : "rubmu23@gmail.com"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : "https://goo.gl/maps/bUmuMDanjPvawNAA7" # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : "https://rubmu.github.io/git-wiki"
   bitbucket        :
   codepen          :
@@ -97,7 +97,7 @@ author:
   facebook         :
   foursquare       :
   github           : "rubmu"
-  google_plus      : "https://goo.gl/maps/bUmuMDanjPvawNAA7"
+  google_plus      : 
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
