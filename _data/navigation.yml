@@ -6,10 +6,10 @@ main:
   - title: "Презентации"
     url: /talks/    
 
-  - title: "обучение"
+  - title: "Обучение"
     url: /teaching/    
     
-  - title: "Проеткы"
+  - title: "Проекты"
     url: /portfolio/
         
   #- title: "Blog Posts"
@@ -18,5 +18,5 @@ main:
   #- title: "CV"
   #  url: /cv/
     
-  #- title: "Guide"
-  #  url: /markdown/
+  - title: "Как писать"
+    url: /markdown/
