@@ -1,5 +1,5 @@
 ---
-title: "Проект 1 "QR коды"
+title: "Portfolio item number 1"
 excerpt: "Генерируем QR-код (etc. цветной) с логотипом в браузере<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
