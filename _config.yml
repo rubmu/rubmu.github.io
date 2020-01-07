@@ -89,7 +89,7 @@ author:
   googlescholar    : "https://scholar.google.ru/citations?view_op=list_works&hl=ru&user=nq9uJLwAAAAJ"
   email            : "rubmu23@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  uri              : "https://rubmu.github.io/git-wiki"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -114,7 +114,7 @@ author:
   weibo            :
   xing             :
   youtube          :
-  wikipedia        : "https://rubmu.github.io/git-wiki"
+  wikipedia        : 
 
 
 # Reading Files
