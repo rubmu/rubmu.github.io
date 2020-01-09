@@ -1,6 +1,6 @@
 ---
 title: "Использование технологии QR-кодов"
-excerpt: "Генерируем QR-код (etc. цветной) с логотипом в браузере<br/><img src='/images/500x300.png'>"
+excerpt: "Генерируем QR-код (etc. цветной) с логотипом в браузере<br/><img src='/images/qr-code.png'>"
 collection: portfolio
 ---
 
