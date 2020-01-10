@@ -1,7 +1,7 @@
 # main links links
 main:
-  #- title: "Publications"
-  #  url: /publications/
+  - title: "Публикации"
+    url: /publications/
 
   - title: "Презентации"
     url: /talks/    
@@ -18,5 +18,5 @@ main:
   #- title: "CV"
   #  url: /cv/
     
-  - title: "Как писать"
-    url: /markdown/
+  #- title: "Как писать"
+  # url: /markdown/
