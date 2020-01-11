@@ -1,7 +1,7 @@
 # main links links
 main:
-  - title: "Статьи"
-    url: /publications/
+  #- title: "Публикации"
+  #  url: /publications/
 
   - title: "Презентации"
     url: /talks/    
@@ -12,8 +12,8 @@ main:
   - title: "Проекты"
     url: /portfolio/
         
-  #- title: "Blog Posts"
-  #  url: /year-archive/
+  - title: "Статьи"
+    url: /year-archive/
     
   #- title: "CV"
   #  url: /cv/
