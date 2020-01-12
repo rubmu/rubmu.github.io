@@ -4,8 +4,8 @@ collection: publications
 permalink: /publication/2020-01-12-paper-title-number-3
 excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
 date: 2020-01-12
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
+venue: 'На Хабре ​думающие ​люди ​делятся ​уникальным ​​опытом'
+paperurl: 'https://habr.com/ru/article/475964/'
 citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
 ---
 В IT невозможно дойти до предела совершенства — всегда есть куда расти. То, в каком режиме специалист получает знания, зависит от обстоятельств и везения. Иногда наступает момент, когда срочно получить необходимый навык или освоить новую область знаний становится критически важным, поскольку от этого зависит карьера. Ниже — три истории зрелых IT-специалистов о том, как решение продолжать учиться повлияло на их путь в профессии.
