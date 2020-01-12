@@ -124,34 +124,17 @@ citation: 'Your Name, You. (2009). &quot;Paper Title Number 4.&quot; <i>Journal 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/5WU957mDPsU" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 ## [Презентация о работе над проектом](https://www.asutp-volgograd.com/blog/presentation-tanks.html)
-
-4/5/2017
-
-[		1 Комментарий
-](https://www.asutp-volgograd.com/blog/presentation-tanks.html#comments)
-
  ![Фотография](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/published/2017-05-04-23-26-24715f.png?1493929933)  
-
-Сегодня провел ещё одну лекцию в Политехе.   
-Описал то как идет работа над новым проектом и попрограммировал в интерактивном режиме вместе с ребятами, которые пришли меня послушать. Задача была в разработке алгоритмов управления заполнения ёмкостей.  
 
 Прикладываю [презентацию](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/p.pptx) и [программу](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/plc160_pre.pro) для CODESYS 2.3. Помимо кодесиса на сайте ОВЕН нужно скачать таргеты для ПЛК160, хотя переменные к конфигурации не привязаны и, возможно, заработет без них.   
 
 Почитайте [о понимании задачи у Ильяхова](http://us9.campaign-archive2.com/?u=89138ced008e0282fe335b3a8&id=ecb83a6bb9&e=[UNIQID]).  
 
-Заметки из блокнота:  
+[Заметки из блокнота:](https://www.asutp-volgograd.com/blog/category/codesys.html)  
 
 <font color="#818181">Особенности системы:<br>— Работа в «ручном» и автоматическом режимах<br>— В автомате емкости наполняются одновременно, но независимо<br>— Ручной режим: программный, через ПЛК<br>— При наполнении включается скважинный насос<br>— Защита от перелива<br>— Защита насоса от сухого хода<br><br>Ёмкость (TANK):<br>— уровень минимальный minLvl<br>— уровень средний midLvl<br>— уровень максимальный maxLvl<br>— уровень аварийный alrLvl<br>— закрыта closed<br>— открыта opened<br>— открыть open<br>— авария alarm</font>
 
-[		1 Комментарий
-	](https://www.asutp-volgograd.com/blog/presentation-tanks.html#comments)
-
 ## [Каскадное управление котлами на ПЛК. Температурно-временные интегралы](https://www.asutp-volgograd.com/blog/cascade.html)
-
-6/3/2016
-
-[		24 Комментарии
-](https://www.asutp-volgograd.com/blog/cascade.html#comments)
 
 ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/7828648eefc.png?763)
 
@@ -167,27 +150,12 @@ citation: 'Your Name, You. (2009). &quot;Paper Title Number 4.&quot; <i>Journal 
 _**PS**. Интеграл называется температурно-временным только условно. Описывать я буду математический алгоритм, который с успехом применяется и к каскаду насосов, опираясь на создаваемое ими давление.  
 
 **PPS**. Программный код функционального блока на языке ST прилагается. Халява!  
-
-​_  
-
 [Подробнее](https://www.asutp-volgograd.com/blog/cascade.html)
 
-[		24 Комментарии
-	](https://www.asutp-volgograd.com/blog/cascade.html#comments)
-
 ## [Raspberry Pi в роли ПЛК на CODESYS. Введение](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html)
-
-6/2/2016
-
-[		33 Комментарии
-](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html#comments)
-
 [![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/96040760960.jpg?1454775748)](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html)
 
 Raspberry Pi — мегапопулярный бюджетный микрокомпьютер, детище британской магии. Стараниями ребят из 3S Software появилась возможность запустить на нём CODESYS третьей версии. С тех пор обновления идут одно за другим и поддерживаются последние патчи среды, а вот у производителей ПЛК отставание на год минимум.  
-
-​  
-
 Сам микрокомпьютер продаётся в любой темной подворотне и на Алиэкспрессе.  
 
 Девайс у меня полгода. Использовал его для тестирования функций CODESYS 3.5, но сейчас задумал применить на реальном объекте.   
@@ -197,15 +165,7 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html)
 
-[		33 Комментарии
-	](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html#comments)
-
 ## [Советы по программированию ПЛК с примерами в среде CODESYS](https://www.asutp-volgograd.com/blog/codesys-advices.html)
-
-13/6/2015
-
-[		20 Комментарии
-](https://www.asutp-volgograd.com/blog/codesys-advices.html#comments)
 
 Советы конкретные и философские. С примерами и скриншотами. Буду дополнять.
 
@@ -213,15 +173,7 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/codesys-advices.html)
 
-[		20 Комментарии
-	](https://www.asutp-volgograd.com/blog/codesys-advices.html#comments)
-
 ## [ФБ PUMPS: простой блок переключения насосов в Codesys 2.3](https://www.asutp-volgograd.com/blog/pumps-codesys.html)
-
-18/3/2015
-
-[		12 Комментарии
-](https://www.asutp-volgograd.com/blog/pumps-codesys.html#comments)
 
 Вечерком [по заказу разработал простой блок](https://www.asutp-volgograd.com/programmirovanie-plc.html) для автоматического перехода между тремя насосами по таймеру и авариям. Также я снабдил его функцией принудительного перехода, функцией выбора первого насоса и возможностью после пропадания питания начинать работу с последнего насоса и того времени, на котором остановился таймер.
 
@@ -229,15 +181,7 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/pumps-codesys.html)
 
-[		12 Комментарии
-	](https://www.asutp-volgograd.com/blog/pumps-codesys.html#comments)
-
 ## [Функция "График" по 10 или менее точкам с сортировкой в CoDeSys](https://www.asutp-volgograd.com/blog/graph-codesys.html)
-
-13/2/2014
-
-[		7 Комментарии
-](https://www.asutp-volgograd.com/blog/graph-codesys.html#comments)
 
 [ ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/966066411b9.png?303)](https://www.asutp-volgograd.com/blog/graph-codesys.html) 
 
@@ -245,15 +189,7 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/graph-codesys.html)
 
-[		7 Комментарии
-	](https://www.asutp-volgograd.com/blog/graph-codesys.html#comments)
-
 ## [Управление по RS-485 (Modbus RTU) частотным преобразователем Hyundai N700E](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html)
-
-16/7/2013
-
-[		16 Комментарии
-](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html#comments)
 
 [![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/7789060eda8.gif?267)](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html)
 
@@ -261,15 +197,7 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html)
 
-[		16 Комментарии
-	](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html#comments)
-
 ## [Конфигурации ОВЕН ПЛК 150 и ПЛК 160 в CoDeSys](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html)
-
-16/6/2013
-
-[		2 Комментарии
-](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html#comments)
 
 [![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/5481442c06d.png?690)](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html)
 
@@ -277,15 +205,8 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html)
 
-[		2 Комментарии
-	](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html#comments)
-
 ## [ПИД-регулятор для преобразователей частоты в CoDeSys](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html)
 
-19/5/2013
-
-[		4 Комментарии
-](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html#comments)
 
  ![ПИД-регулятор для частотников в CoDeSys](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/97289cfee.jpg?478) 
 
@@ -293,15 +214,7 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html)
 
-[		4 Комментарии
-	](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html#comments)
-
 ## [ПИД-регулятор для КЗР в CoDeSys](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html)
-
-14/5/2013
-
-[		66 Комментарии
-](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html#comments)
 
 ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/3820786f770.jpg?482)
 
@@ -309,16 +222,6 @@ _PS. Если изучаете третий CODESYS — смело покупа�
 
 [Подробнее](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html)
 
-[		66 Комментарии
-	](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html#comments)
-
 ## [Продвинутый курс программирования ОВЕН ПЛК в CoDeSys](https://www.asutp-volgograd.com/blog/-codesys.html)
 
-19/2/2013
-
-[		3 Комментарии
-](https://www.asutp-volgograd.com/blog/-codesys.html#comments)
-
  ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/1291828dc91.jpg?385) 
-
-На прошлой неделе смотался в Москву на "[Продвинутый учебный курс по программированию ОВЕН ПЛК в среде CoDeSys](http://www.owen.ru/text/81566228)", с трудом выбив командировку на работе. Доволен.     
