@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2020-01-12-paper-title-number-4
 excerpt: 'This paper is about the number 4. The number 5 is left for future work.'
 date: 2020-01-12
-venue: 'Journal 1'
+venue: 'ПЛК и CoDeSyS'
 paperurl: 'http://prolog-plc.ru/codesys'
 citation: 'Your Name, You. (2009). &quot;Paper Title Number 4.&quot; <i>Journal 4</i>. 1(1).'
 ---
@@ -13,283 +13,312 @@ citation: 'Your Name, You. (2009). &quot;Paper Title Number 4.&quot; <i>Journal 
 [Общие сведения о CODESYS](http://prolog-plc.ru/pb2 "Общие сведения о CoDeSys")
 [ПЛК и ПЛК ядра](http://prolog-plc.ru/node/21 "ПЛК и ПЛК ядра")
 
-### Коммуникационные ПЛК BECK серии com.tom
+Сейчас на многих станках, линиях и агрегатах стоят панели оператора, либо сенсорные панельные контроллеры. Вы сами понимаете, что это очень удобно. На экране можно вывести множество функций: графики физических величин, архивация данных, рецепты, настройки оповещений по смс, рецепты вкусных булочек. Да и просто удобная и красивая индикация: лампочки, кнопочки и переключатели. На чём это всё пишется? Среди разнообразия ПО, я остановился на CoDeSyS 3.5. В CoDeSyS 3.5 визуализация обладает рядом преимуществ, которые будут рассматриваться в этой статье.
 
-*[Швецов М.Л. ПЛК BECK серии com.tom](http://prolog-plc.ru/pb6 "Коммуникационные ПЛК BECK серии com.tom")
+[**Из этой статьи вы узнаете:**](http://kip-world.ru/da-vy-tozhe-mozhete-delat-vizualizatsiyu-na-codesys-3-5-zaprosto.html)
 
-### CODESYS с точки зрения изготовителя ПЛК (OEM)
+> [В общих чертах о CoDeSyS 3.5](http://kip-world.ru/da-vy-tozhe-mozhete-delat-vizualizatsiyu-na-codesys-3-5-zaprosto.html#toc1)  
+> [Визуализация CoDeSyS 3.5](http://kip-world.ru/da-vy-tozhe-mozhete-delat-vizualizatsiyu-na-codesys-3-5-zaprosto.html#toc2)  
+> [Простейший пример проекта](http://kip-world.ru/da-vy-tozhe-mozhete-delat-vizualizatsiyu-na-codesys-3-5-zaprosto.html#toc3)
 
-*Петров И.В. "CODESYS с точки зрения OEM: Систему программирования МЭК61131-3 мы сделаем сами?"  
+Привет, друзья! Это одна из основных сред разработки, которую я использую при внедрении и наладке автоматизации оборудования. Сегодня мы с вами поговорим во всех подробностях.  
 
-"Промышленные АСУ и контроллеры" N5 2005г.
+## В общих чертах о CoDeSyS 3.5
 
-Действующие лица: Аппаратчик, Программист, Коммерческий директор. Персонажи являются вымышленными, любые совпадения случайны...  
-[Полный текст статьи (pdf 111kB)](http://prolog-plc.ru/3s/docs/iec_doityourself.pdf)
+Среда разработки является продуктом 3S-Smart Software. CoDeSyS-это аппаратно-независимая система для программирования ПЛК. Она поддерживает все языки [стандарта МЭК](http://kip-world.ru/chto-takoe-codesys2-3-i-s-chem-ego-edyat.html). Сочетает в себе объектно-ориентированное программирование(то есть с помощью визуальных функциональных блоков). Возможна работа с несколькими устройствами и приложениями.
 
-*Петров И.В. "Применение интегрированного комплекса МЭК 61131-3 программирования CODESYS для ПЛК собственного производства"  
+[![Окно CoDeSyS 3](http://kip-world.ru/wp-content/uploads/2016/10/Rabochee_okno.png)](http://kip-world.ru/wp-content/uploads/2016/10/Rabochee_okno.png)
 
-Материалы конференции “ПРОМЫШЛЕННЫЕ КОНТРОЛЛЕРЫ: от А до Я”  Москва, ДК МАИ 1 ноября 2005г  
-[Читать](http://prolog-plc.ru/mai1)
+В чём же принципиальное отличие от [версии CoDeSyS 2.3](http://kip-world.ru/kak-programmirovat-na-codesys-2-3-novichku-legko.html)? Принципы программирования и построения языков остаются теми же. Давайте рассмотрим преимущества данной системы:
 
-### CODESYS V3
+1.  Добавилось очень много полезных функций (в основном, касающиеся визуализации);
+2.  Рабочее окно среды разработки стало гораздо удобнее;
+3.  Существуют готовые библиотеки модулей ввода-вывода;
+4.  Возможность Веб-визуализации;
+5.  Ну и конечно самый главный козырь, это сама визуализация;
 
-*NEW Роланд Вагнер "Эффективная автоматизация с помощью Codesys Store"  
+Мне, честно говоря, нравится работать в двух версиях, и в CoDeSyS 2.3, и в 3.5. Каждая по-своему удобна. Единственный недостаток новой среды заключается в том, что она в постоянной разработке, то есть всё время обновляется. И периодически при компиляции возникает куча ошибок, с которыми иногда невозможно разобраться.
 
-"ETZ" N3 2014г  
-[Скачать (pdf 2.2MB)](http://prolog-plc.ru/3s/docs/ETZ_RUS_03_2014.pdf)
+Какое оборудование поддерживает CoDeSyS 3.5? Из отечественных контроллеров я знаю СПК сотой и двухсотой серии, ПЛК 323 и ПЛК304. Из «Буржуйских» мне известно о WAGO и Berghof.
 
-*Дитер Хесс "Объектно-ориентированные расширения МЭК 61131-3"  
+![ПЛК](http://kip-world.ru/wp-content/uploads/2016/10/PLC.png)
 
-"СТА" N2 2006г  
-[Читать](http://prolog-plc.ru/oopIECru)
+На самом деле, работать в этой среде разработки сложно. Очень много нюансов. Каждый новый проект у меня начинается с самого начала.
 
-*Петров И.В. "CODESYS 3.0 – новый уровень инструментов программирования ПЛК"  
+Для изучения требуется перелопатить кучу инструкций и помучить ребят из тех. поддержки компании ОВЕН. В следующих своих статьях я ознакомлю вас со многими фишками, если будет кому интересно.  
 
-"СТА" N2 2005г.
+## Визуализация CoDeSyS 3.5
 
-Десять лет назад компания 3S-Smart Software Solutions впервые представила на европейском рынке свой инструмент МЭК 61131_3 программирования. За прошедшие годы он непрерывно развивался и расширялся. Теперь 3S представляет концептуально новый инструмент, получивший название CODESYS 3.0.  
-[Полный текст статьи (pdf 139kB)](http://prolog-plc.ru/3s/docs/codesys30_cta_02.pdf)
+Отдельно бы хотелось поговорить о визуализации в среде разработки. Это шикарный инструмент для реализации большинства задач в производстве. Весь технологический процесс можно отобразить на экранах, сделать красивые графики, архивацию, анимацию и т.п. Ниже приведу видео для наглядной демонстрации возможностей визуализации.
 
-*Петров И.В. "Перспективы развития языков МЭК 61131-3 в новом поколении комплекса CODESYS"  
+<iframe width="640" height="360" src="https://www.youtube.com/embed/G7SQyJaTnIE" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-Материалы конференции “ПРОМЫШЛЕННЫЕ КОНТРОЛЛЕРЫ: от А до Я”  Москва, ДК МАИ 1 ноября 2005г.  
-[Читать](http://prolog-plc.ru/mai2)
 
-Ниже для загрузки представлены выборочные презентации с конференций последних лет в формате PDF.
+## Простейший пример проекта
 
-## 2018 год
+Мы с вами сейчас создадим простой проект в среде разработки CoDeSyS 3.5. Давайте сделаем так, чтобы от кнопки включалась и выключалась лампочка.
 
-***CODESYS ПЛК на базе серийных устройств с ОС Linux**  
+Дистрибутив можно скачать с официального сайта компании ОВЕН. Стандартная установка. Всё, как обычно.
 
-[Михаил Швецов, ООО ПК Пролог](http://prolog-plc.ru/docs/conf18/Linux_adaptation_18_ru.pdf)
+Запускаем программу и создаём проект.
 
-***CODESYS ПЛК на базе Kaspersky OS**  
+[![Новый проект](http://kip-world.ru/wp-content/uploads/2016/10/Project_new.png)](http://kip-world.ru/wp-content/uploads/2016/10/Project_new.png)
 
-[Дмитрий Пастушенков, BE.services GmbH](http://prolog-plc.ru/docs/conf18/CODESYS_PLC_on_KOS_18_ru.pdf)
+Так как у меня под рукой нет сенсорной панели, я задам устройство-эмулятор, которое загружается с компьютера. Работать будем на наиболее наглядном языке CFC. Для начала в правом нижнем углу нам нужно запустить эмулятор контроллера.
 
-***Новые возможности визуализации CODESYS**  
+Затем нажимаем 
+<kbd>Scan Network</kbd>, и система должна обнаружить ваш компьютер.
 
-[Максим Сироткин, ООО ПК Пролог](http://prolog-plc.ru/docs/conf18/Visualization_18_ru.pdf)
+[![Стартовый контроллер](http://kip-world.ru/wp-content/uploads/2016/10/Start_win3.png)](http://kip-world.ru/wp-content/uploads/2016/10/Start_win3.png)
 
-***Стандарты разработки для языков МЭК от PLCopen**  
+Давайте создадим простейшую программу.
 
-[Алексей Осинский, компания Овен](http://prolog-plc.ru/docs/conf18/IEC_prg_PLCopen_18_ru.pdf)
+[![Простая программа](http://kip-world.ru/wp-content/uploads/2016/10/Programm.png)](http://kip-world.ru/wp-content/uploads/2016/10/Programm.png)
 
+Добавляем визуализацию в наш проект. Правой кнопкой мыши вызываем контекстное меню и жмем 
+<kbd>Добавить объект</kbd>.
 
-***Инструменты на каждый день из CODESYS Store (англ.)**  
+[![Новая визуализация](http://kip-world.ru/wp-content/uploads/2016/10/New_VISU.png)](http://kip-world.ru/wp-content/uploads/2016/10/New_VISU.png)
 
-[Борис Шустер, 3S-Smart Software Solutions GmbH](http://prolog-plc.ru/docs/conf18/Use-Cases-CODESYS-Store_18_en.pdf)
+Рисуем визуализацию под наш алгоритм. Выбираем элементы во вкладке панели инструментов.
 
-***Защита прикладных программ в CODESYS**  
+[![Кнопка с лампой](http://kip-world.ru/wp-content/uploads/2016/10/Knopka_lampa.png)](http://kip-world.ru/wp-content/uploads/2016/10/Knopka_lampa.png)
 
-[Игорь Петров, ООО ПК Пролог](http://prolog-plc.ru/docs/conf18/PRG_protection_18_ru.pdf)
+Присваиваем переменные элементам во вкладке свойства. Для кнопки:
 
-***Промышленный Интернет средствами CODESYS (англ.)**  
+[![Свойства кнопки](http://kip-world.ru/wp-content/uploads/2016/10/Svoistvo_knopki.png)](http://kip-world.ru/wp-content/uploads/2016/10/Svoistvo_knopki.png)
 
-[Борис Шустер, 3S-Smart Software Solutions GmbH](http://prolog-plc.ru/docs/conf18/IIOT_18_en.pdf)
+Для лампочки:
 
-## 2017 год
+[![Свойство лампочки](http://kip-world.ru/wp-content/uploads/2016/10/Svoictvo_Lamp.png)](http://kip-world.ru/wp-content/uploads/2016/10/Svoictvo_Lamp.png)
 
----
+Из настроек на этом у нас всё. Теперь нажимаем на кнопку 
+<kbd>Логин</kbd>. И в результате у вас должна получиться вот такая картинка:
 
-***Разработка интерфейса оператора стала проще – новые инструменты и функции визуализации CODESYS.**  
+![Кнопка нажата](http://kip-world.ru/wp-content/uploads/2016/10/Najatie.png)
 
-[ПК Пролог, Максим Сироткин](http://prolog-plc.ru/docs/conf17/CODESYS_HMI_17_ru.pdf)
+Я реализовывал несколько проектов в этой программе. Но наиболее удачный и «красивый» проект у меня получился на **автоматизации** **холодильных камер**. Задача заключалась в том, чтобы охлаждать камеры до определённой температуры.
 
-***Безопасность систем промышленной автоматизации – актуальные угрозы и защитные механизмы CODESYS. (англ.)**  
+В первой камере охлаждается воздух с помощью заслонки в приточной системе. Во второй и третьей камере охлаждается воздух каскадным включением компрессоров в зависимости от времени наработки.  Все эти физические данные архивируются. В случае аварии контроллер отправляет сообщение смс на указанный номер.
 
-[3S-Smart Software Solutions GmbH, Манфред Вернер](http://prolog-plc.ru/docs/conf17/CODESYS_Security_17_en.pdf)
+Писал программу я на сенсорном панельном контроллере СПК207.03.CS.WEB. Давайте покажу вам несколько иллюстраций моей работы.
 
-***Безопасность систем промышленной автоматизации – применение опыта обеспечения IT безопасности в промышленной автоматизации. Kaspersky Security System (KSS).**  
+Главное меню панельного контроллера:
 
-[Лаборатория Касперского, Алексей Лафицкий](http://prolog-plc.ru/docs/conf17/Kaspersky_KSS_17_ru.pdf)
+![Главное окно](http://kip-world.ru/wp-content/uploads/2016/10/Screenshot_1.png)
 
-***Embedded Security Shield для CODESYS. Применение технологий KSS в системах автоматизации.**  
+Аварии компрессоров:
 
-[BE.services](http://prolog-plc.ru/docs/conf17/Embedded_Security_Shield_for_CODESYS_17_ru.pdf)
+![Аварии компрессоров](http://kip-world.ru/wp-content/uploads/2016/10/Screenshot_3.png)
 
-***Технология быстрой и экономичной разработки устройств, программируемых в CODESYS V3, на основе программно-аппаратных модулей.**  
+Время наработки компрессоров:
 
-[ПК Пролог, Михаил Швецов](http://prolog-plc.ru/docs/conf17/Variscite_and_CDS_17_ru.pdf)
+![Время наработки](http://kip-world.ru/wp-content/uploads/2016/10/Screenshot_4.png)
 
-***Дорожная карта CODESYS. (англ.)**  
+И наконец, WEB-визуализация:
 
-[3S-Smart Software Solutions GmbH, Манфред Вернер](http://prolog-plc.ru/docs/conf17/CODESYS_Roadmap_17_en.pdf)
+![Веб-визуализация](http://kip-world.ru/wp-content/uploads/2016/10/Screenshot_2-1.png)
 
-## 2016 год
+Выкладываю видео, где вся эта система работает:
 
----
+<iframe width="640" height="360" src="https://www.youtube.com/embed/5WU957mDPsU" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-***Наиболее значимые новые системы управления с CODESYS в мире (англ.)**  
+## [Презентация о работе над проектом](https://www.asutp-volgograd.com/blog/presentation-tanks.html)
 
-[3S-Smart Software Solutions GmbH, Boris Schuster](http://prolog-plc.ru/docs/conf16/Avl_control_sys_16_en.pdf)
+4/5/2017
 
-***Обработка событий в программах и библиотеках**  
+[		1 Комментарий
+](https://www.asutp-volgograd.com/blog/presentation-tanks.html#comments)
 
-[ПК Пролог, Михаил Швецов](http://prolog-plc.ru/docs/conf16/Event_Handling_16_ru.pdf)  
-[пример](http://prolog-plc.ru/docs/conf16/Events.project)  
+ ![Фотография](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/published/2017-05-04-23-26-24715f.png?1493929933)  
 
-***Ответственная разработка продвинутой визуализации**  
+Сегодня провел ещё одну лекцию в Политехе.   
+Описал то как идет работа над новым проектом и попрограммировал в интерактивном режиме вместе с ребятами, которые пришли меня послушать. Задача была в разработке алгоритмов управления заполнения ёмкостей.  
 
-[ПК Пролог, Максим Сироткин](http://prolog-plc.ru/docs/conf16/Sophisticated_Visualization_16_ru.pdf)  
-**[пример](http://prolog-plc.ru/docs/conf16/uc2016_visualization.project)
+Прикладываю [презентацию](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/p.pptx) и [программу](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/plc160_pre.pro) для CODESYS 2.3. Помимо кодесиса на сайте ОВЕН нужно скачать таргеты для ПЛК160, хотя переменные к конфигурации не привязаны и, возможно, заработет без них.   
 
-***Практика применения 3х мерной визуализации (англ.)**  
+Почитайте [о понимании задачи у Ильяхова](http://us9.campaign-archive2.com/?u=89138ced008e0282fe335b3a8&id=ecb83a6bb9&e=[UNIQID]).  
 
-[3S-Smart Software Solutions GmbH, Hilmar Panzer](http://prolog-plc.ru/docs/conf16/3D_visu_16%20_en.pdf)
+Заметки из блокнота:  
 
-***Эволюция технических требований и базового функционала МЭК 61131-3**  
+<font color="#818181">Особенности системы:<br>— Работа в «ручном» и автоматическом режимах<br>— В автомате емкости наполняются одновременно, но независимо<br>— Ручной режим: программный, через ПЛК<br>— При наполнении включается скважинный насос<br>— Защита от перелива<br>— Защита насоса от сухого хода<br><br>Ёмкость (TANK):<br>— уровень минимальный minLvl<br>— уровень средний midLvl<br>— уровень максимальный maxLvl<br>— уровень аварийный alrLvl<br>— закрыта closed<br>— открыта opened<br>— открыть open<br>— авария alarm</font>
 
-[ПК Пролог, Игорь Петров](http://prolog-plc.ru/docs/conf16/61131-3_16_ru.pdf)
+[		1 Комментарий
+	](https://www.asutp-volgograd.com/blog/presentation-tanks.html#comments)
 
-***Новые функции и инструменты CODESYS (англ.)**  
+## [Каскадное управление котлами на ПЛК. Температурно-временные интегралы](https://www.asutp-volgograd.com/blog/cascade.html)
 
-[3S-Smart Software Solutions GmbH, Hilmar Panzer](http://prolog-plc.ru/docs/conf16/New_Features_16_en.pdf)
+6/3/2016
 
-***Мониторинг и управление с использованием PLCcloud**  
+[		24 Комментарии
+](https://www.asutp-volgograd.com/blog/cascade.html#comments)
 
-[ПК Пролог, Михаил Швецов](http://prolog-plc.ru/docs/conf16/PLCcloud_16_ru.pdf)
+![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/7828648eefc.png?763)
 
-***Дорожная карта развития CODESYS (англ.)**  
+​В недавнем проекте по автоматизации котельных в Оренбургской области — ПЛК управляет каскадом котлов, от двух до четырёх штук.  
 
-[3S-Smart Software Solutions GmbH, Boris Schuster](http://prolog-plc.ru/docs/conf16/Roadmap_16_en.pdf)
+До этого программировал только каскады насосов с частотными преобразователями и алгоритм строился на анализе частоты и давления. Тут всё просто — запущенные частотники работают на одной частоте. Если дошли до максимума, а давления мало — подключаем ещё один. И наоборот, частота упала ниже заданной границы — отключаем.  
 
-## 2015 год
+Но в случае котлов анализируется один единственный параметр — создаваемая ими температура воды в котловом контуре. Как, зная эту температуру и уставку, определить сколько котлов должно работать?  
 
----
+Ответ — с помощью **температурно-временных интегралов**. Да, звучит не особенно увлекательно и лучше сходите в кино, но если приспичило узнать о каскадном управлении — вперед.  
 
-***Автоматизация энергосистем: Конфигурация сервера МЭК 61850 в среде разработки CODESYS**  
+​  
+_**PS**. Интеграл называется температурно-временным только условно. Описывать я буду математический алгоритм, который с успехом применяется и к каскаду насосов, опираясь на создаваемое ими давление.  
 
-[3S-Smart Software Solutions GmbH, Michael Schwarz](http://prolog-plc.ru/docs/conf15/Automate_Energy_Systems_ru.pdf)
+**PPS**. Программный код функционального блока на языке ST прилагается. Халява!  
 
-***Повышаем эффективность работы: повседневные приемы - привычные и новые**  
+​_  
 
-[3S-Smart Software Solutions GmbH, Boris Schuster; ПК Пролог, Игорь Петров, Михаил Швецов](http://prolog-plc.ru/docs/conf15/Benefit_from_Tips_and_Tricks_ru.pdf)
+[Подробнее](https://www.asutp-volgograd.com/blog/cascade.html)
 
-***Повышение надежности: Реализация дублирования в приложениях, используя CODESYS Redundancy**  
+[		24 Комментарии
+	](https://www.asutp-volgograd.com/blog/cascade.html#comments)
 
-[3S-Smart Software Solutions GmbH, Thomas Zauner](http://prolog-plc.ru/docs/conf15/Improve_Availability.pdf)
+## [Raspberry Pi в роли ПЛК на CODESYS. Введение](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html)
 
-***Повышение эффективности: как выгодно воспользоваться интегрированными инструментами при разработке приложения МЭК 61131-3**  
+6/2/2016
 
-[3S-Smart Software Solutions GmbH, Michael Schwarz](http://prolog-plc.ru/docs/conf15/Improve_Efficiency_ru.pdf)
+[		33 Комментарии
+](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html#comments)
 
-***Актуальный обзор: для кого предназначены продукты комплекса CODESYS?**  
+[![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/96040760960.jpg?1454775748)](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html)
 
-[3S-Smart Software Solutions GmbH, Boris Schuster](http://prolog-plc.ru/docs/conf15/Keep_the_overview_ru.pdf)
+Raspberry Pi — мегапопулярный бюджетный микрокомпьютер, детище британской магии. Стараниями ребят из 3S Software появилась возможность запустить на нём CODESYS третьей версии. С тех пор обновления идут одно за другим и поддерживаются последние патчи среды, а вот у производителей ПЛК отставание на год минимум.  
 
-***Классическое ПЛК программирование с использованием библиотек**  
+​  
 
-[ПК Пролог, Игорь Петров](http://prolog-plc.ru/docs/conf15/Library_Management_ru.pdf)
+Сам микрокомпьютер продаётся в любой темной подворотне и на Алиэкспрессе.  
 
-***Как получить максимум от CODESYS Control Runtime System**  
+Девайс у меня полгода. Использовал его для тестирования функций CODESYS 3.5, но сейчас задумал применить на реальном объекте.   
 
-[3S-Smart Software Solutions GmbH, Thomas Zauner](http://prolog-plc.ru/docs/conf15/Make_the_Right_Choice.pdf)
+​  
+_PS. Если изучаете третий CODESYS — смело покупайте Raspberry. На симуляторе далеко не уедешь, а обычные ПЛК дороговаты._  
 
-## 2014 год
+[Подробнее](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html)
 
----
+[		33 Комментарии
+	](https://www.asutp-volgograd.com/blog/raspberry-pi-codesys-intro.html#comments)
 
-***CODESYS: 20 лет истории. Стратегия развития и текущие разработки. Часть 1**  
+## [Советы по программированию ПЛК с примерами в среде CODESYS](https://www.asutp-volgograd.com/blog/codesys-advices.html)
 
-[3S-Smart Software Solutions GmbH,  Dieter Hess](http://prolog-plc.ru/docs/conf14/UC_2014_CODESYS_Bussiness_en.pdf)
+13/6/2015
 
-***CODESYS: 20 лет истории. Стратегия развития и текущие разработки. Часть 2**  
+[		20 Комментарии
+](https://www.asutp-volgograd.com/blog/codesys-advices.html#comments)
 
-[3S-Smart Software Solutions GmbH,  Dieter Hess](http://prolog-plc.ru/docs/conf14/UC_2014_CODESYS_Roadmap_en.pdf)
+Советы конкретные и философские. С примерами и скриншотами. Буду дополнять.
 
-***CODESYS визуализация: использование стилей для создания умных интерфейсов пользователя**  
+ ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/2565077821f.png?455)   
 
-[3S-Smart Software Solutions GmbH, Boris Schuster](http://prolog-plc.ru/docs/conf14/UC_2014_CODESYS_Visualization_en.pdf)
+[Подробнее](https://www.asutp-volgograd.com/blog/codesys-advices.html)
 
-***Комплекс CODESYS: практические инструменты для всех**  
+[		20 Комментарии
+	](https://www.asutp-volgograd.com/blog/codesys-advices.html#comments)
 
-[ПК Пролог, Игорь Петров](http://prolog-plc.ru/docs/conf14/UC_2014_Automation_solutions_ru.pdf)
+## [ФБ PUMPS: простой блок переключения насосов в Codesys 2.3](https://www.asutp-volgograd.com/blog/pumps-codesys.html)
 
-***Новые функции CODESYS полезные каждый день**  
+18/3/2015
 
-[3S-Smart Software Solutions GmbH, Dieter Hess](http://prolog-plc.ru/docs/conf14/UC_2014_CODESYS_Update_en.pdf)
+[		12 Комментарии
+](https://www.asutp-volgograd.com/blog/pumps-codesys.html#comments)
 
-***Разработка и организация распространения собственных библиотек через CODESYS Store**  
+Вечерком [по заказу разработал простой блок](https://www.asutp-volgograd.com/programmirovanie-plc.html) для автоматического перехода между тремя насосами по таймеру и авариям. Также я снабдил его функцией принудительного перехода, функцией выбора первого насоса и возможностью после пропадания питания начинать работу с последнего насоса и того времени, на котором остановился таймер.
 
-[3S-Smart Software Solutions GmbH, Boris Schuster](http://prolog-plc.ru/docs/conf14/UC_2014_CODESYS_Libraries_Store_en.pdf)
+ ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/6358414250c.png?456)   
 
-***Контроллеры с CODESYS: Berghof**  
+[Подробнее](https://www.asutp-volgograd.com/blog/pumps-codesys.html)
 
-[ПК Пролог, Игорь Петров](http://prolog-plc.ru/docs/conf14/UC_2014_Berghof_ru.pdf)
+[		12 Комментарии
+	](https://www.asutp-volgograd.com/blog/pumps-codesys.html#comments)
 
-***Контроллеры с CODESYS: HITACHI**  
+## [Функция "График" по 10 или менее точкам с сортировкой в CoDeSys](https://www.asutp-volgograd.com/blog/graph-codesys.html)
 
-[ПК Пролог, Игорь Петров](http://prolog-plc.ru/docs/conf14/UC_2014_HITACHI_ru.pdf)
+13/2/2014
 
-***CODESYS Application Composer в работе**  
+[		7 Комментарии
+](https://www.asutp-volgograd.com/blog/graph-codesys.html#comments)
 
-[3S-Smart Software Solutions GmbH, Dieter Hess](http://prolog-plc.ru/docs/conf14/UC_2014_CODESYS_Application_Composer_en.pdf)
+[ ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/966066411b9.png?303)](https://www.asutp-volgograd.com/blog/graph-codesys.html) 
 
-***Система погружной телеметрии для нефтяных скважин на базе панельного ПЛК с CODESYS V3**  
+Выкладываю **функцию для построения кусочно-линейных графиков** по выбранному числу точек (максимум 10) с возможностью сортировки. Исходники открыты, как всегда.  
 
-[НПО Техноприбор, Александр Баранов, Иван Брокарев; Токомет, Сергей Изофатов](http://prolog-plc.ru/docs/conf14/UC_2014_Telemetry_ru.pdf)
+[Подробнее](https://www.asutp-volgograd.com/blog/graph-codesys.html)
 
-## 2013 год
+[		7 Комментарии
+	](https://www.asutp-volgograd.com/blog/graph-codesys.html#comments)
 
----
+## [Управление по RS-485 (Modbus RTU) частотным преобразователем Hyundai N700E](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html)
 
-***Бизнес презентация 3S-Smart Software Solutions GmbH**  
+16/7/2013
 
-[3S-Smart Software Solutions, Vitalis Neufeld](http://prolog-plc.ru/docs/conf_pdf/UC2013_Business.pdf)
+[		16 Комментарии
+](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html#comments)
 
-***CODESYS Security – средства обеспечения целостности и защиты прикладных программ**  
+[![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/7789060eda8.gif?267)](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html)
 
-[3S-Smart Software Solutions, Дмитрий Пастушенков](http://prolog-plc.ru/docs/conf_pdf/UC2013_Security.pdf)
+Решились-таки на работе использовать **интерфейс RS-485 для управления** преобразователями частоты Hyundai и Erman (не советую использовать).   
 
-***Новые продукты и функции CODESYS**   
+[Подробнее](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html)
 
-[3S-Smart Software Solutions, Vitalis Neufeld](http://prolog-plc.ru/docs/conf_pdf/UC2013_NewFeatures.pdf)
+[		16 Комментарии
+	](https://www.asutp-volgograd.com/blog/rs-485-modbus-rtu-hyundai-n700e.html#comments)
 
-***Новая редакция стандарта МЭК 61131-3**  
+## [Конфигурации ОВЕН ПЛК 150 и ПЛК 160 в CoDeSys](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html)
 
-[3S-Smart Software Solutions, Дмитрий Пастушенков](http://prolog-plc.ru/docs/conf_pdf/61131-3_ru_draft.pdf)
+16/6/2013
 
-***ОВЕН ПЛК и CODESYS. Опыт многолетнего сотрудничества**  
+[		2 Комментарии
+](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html#comments)
 
-[ОВЕН, Андрей Ельцов](http://prolog-plc.ru/docs/conf_pdf/UC2012_Owen.pdf)
+[![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/5481442c06d.png?690)](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html)
 
-***Эффективное применение ООП CODESYS на практике**  
+Продолжаю делиться кодом и опытом. В этом посте выкладываю выстраданные экспортированные **файлы универсальных конфигураций для ОВЕН ПЛК 150 и ПЛК 160**. В них нет ничего особенно сложного, просто пришел я к их структуре не сразу.    
 
-[ПРОЛОГ, Михаил Швецов](http://prolog-plc.ru/docs/conf_pdf/UC2013_OOP.pdf)
+[Подробнее](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html)
 
-***Новый EtherCAT контроллер, HMI и ввод/вывод компании Berghof**  
+[		2 Комментарии
+	](https://www.asutp-volgograd.com/blog/configuration-plc-codesys.html#comments)
 
-[ПРОЛОГ, Игорь Петров](http://prolog-plc.ru/docs/conf_pdf/Berghof_ru.pdf)
+## [ПИД-регулятор для преобразователей частоты в CoDeSys](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html)
 
-***Приемы эффективного программирования в CODESYS**  
+19/5/2013
 
-[3S-Smart Software Solutions, Vitalis Neufeld](http://prolog-plc.ru/docs/conf_pdf/UC2013_Tips&Trikcs.pdf)
+[		4 Комментарии
+](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html#comments)
 
-***Особенности языка CFC в CODESYS V3**  
+ ![ПИД-регулятор для частотников в CoDeSys](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/97289cfee.jpg?478) 
 
-[ПРОЛОГ, Игорь Петров](http://prolog-plc.ru/docs/conf_pdf/UC2013_CFC.pdf)
+Делюсь функциональным блоком (**от 24.02.2014**) ПИД-регулятора для [частотных преобразователей](https://www.asutp-volgograd.com/chastotnye-preobrazovateli.html). Он крайне прост и мало чем отличается от [блока для управления КЗР](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html), описанного в прошлый раз.  
 
-***CODESYS Store: концепция и практическое применение на примере системы интернет мониторинга и управления 'PLC cloud'**  
+[Подробнее](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html)
 
-[ПРОЛОГ, Михаил Швецов](http://prolog-plc.ru/docs/conf_pdf/UC2013_Store.pdf)
+[		4 Комментарии
+	](https://www.asutp-volgograd.com/blog/pid-regulator-for-inverters-codesys.html#comments)
 
-***CODESYS для пользователя. Что еще ждет нас в этом году?**  
+## [ПИД-регулятор для КЗР в CoDeSys](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html)
 
-[3S-Smart Software Solutions, Vitalis Neufeld](http://prolog-plc.ru/docs/conf_pdf/UC2013_Roadmap.pdf)
+14/5/2013
 
+[		66 Комментарии
+](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html#comments)
 
-# Полезные ссылки
+![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/3820786f770.jpg?482)
 
-### CODESYS
+В посте вы найдете код и подробное описание работающего функционального блока ПИД-регулятора для управления [запорно-регулирующим клапаном](https://www.asutp-volgograd.com/ispolnitelnye-mehanizmy.html) (КЗР) с электроприводом и дискретным управлением (клапану подаются сигналы «больше» и «меньше»). **Теперь блок универсален**: вы можете использовать встроенный в клапан датчик положения, а можете и не использовать. Файл, с экспортированным из CoDeSys v2.3 блоком, приложен в конце статьи.    
 
-* [Сайт компании Smart Software Solutions GmbH](https://www.codesys.com/)
+[Подробнее](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html)
 
-### Beck IPC@CHIP
+[		66 Комментарии
+	](https://www.asutp-volgograd.com/blog/pid-regulator-codesys.html#comments)
 
-* [Сайт компании Beck IPC GmbH](http://www.beck-ipc.com/)
-* [Международный форум по IPC@CHIP](http://forum.beck-ipc.com/)
-* [Сообщество IPC@CHIP® on board](http://www.ipcatchip-onboard.com/index.asp)
-* [Документация API RTOS16 (SC2x, SC1x3)](http://www.beck-ipc.com/files/api/scxxx/index.htm?cache=591551625)
-* [Документация API RTOS32 (SC243)](http://www.beck-ipc.com/files/api/sc2x3/index.html?cache=1021305133)
-* [Библиотека IEC61850 для SC143, SC24. API User Manual](http://www.systemcorp.com.au/products/softwarelibraries/iec61850/)
+## [Продвинутый курс программирования ОВЕН ПЛК в CoDeSys](https://www.asutp-volgograd.com/blog/-codesys.html)
+
+19/2/2013
+
+[		3 Комментарии
+](https://www.asutp-volgograd.com/blog/-codesys.html#comments)
+
+ ![Изображение](https://www.asutp-volgograd.com/uploads/1/5/4/0/15400238/1291828dc91.jpg?385) 
+
+На прошлой неделе смотался в Москву на "[Продвинутый учебный курс по программированию ОВЕН ПЛК в среде CoDeSys](http://www.owen.ru/text/81566228)", с трудом выбив командировку на работе. Доволен.     
