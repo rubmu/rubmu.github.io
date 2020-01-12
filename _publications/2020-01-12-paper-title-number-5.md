@@ -85,29 +85,35 @@ _<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">o
 ![screenshoot](https://www.openmaint.org/++plone++tecnoteca.openmainttheme2019/images/user_interfaces.png)
 
 <section class="section section-s section-bg section-gradiant-alt overlay-shape" id="user-interfaces">
-    ## <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Доступные пользовательские интерфейсы</font></font>
-    * <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Веб-интерфейс для администраторов и пользователей</font></font>
-    * <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Мобильное приложение для мобильных мероприятий</font></font>
-    * <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портал самообслуживания для конечных пользователей&nbsp;</font></font>
-    * <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">REST и SOAP веб-сервисы</font></font>
+## <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Доступные пользовательские интерфейсы</font></font>
+
+* <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Веб-интерфейс для администраторов и пользователей</font></font>
+* <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Мобильное приложение для мобильных мероприятий</font></font>
+* <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портал самообслуживания для конечных пользователей&nbsp;</font></font>
+* <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">REST и SOAP веб-сервисы</font></font>
 </section>
 
 <section class="section section-s" id="verticalizations">
-    ## <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ВЕРТИКАЛЬНОЕ РЕШЕНИЕ CMDBUILD</font></font>
-    _<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">openMAIN</font></font>_
-    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> T основан на программном обеспечении </font></font>[<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMDBuild,</font></font>](http://www.cmdbuild.org/)
-    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> от которого он наследует основные функции и механизмы конфигурации.</font></font>
+## <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ВЕРТИКАЛЬНОЕ РЕШЕНИЕ CMDBUILD</font></font>
+
+_<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">openMAIN</font></font>_
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> T основан на программном обеспечении </font></font>[<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMDBuild,</font></font>](http://www.cmdbuild.org/)
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> от которого он наследует основные функции и механизмы конфигурации.</font></font>
 
 ![CMDBuild](https://www.openmaint.org/++plone++tecnoteca.openmainttheme2019/images/cmdbuild.svg)
+
 <!-- .col  -->
-    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Управление активами</font></font>
-    ## <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMDBuild</font></font>
-    [<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMDBuild </font></font>](http://www.cmdbuild.org/)<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;- это веб-среда для настройки пользовательских приложений для управления активами.</font></font>
+
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Управление активами</font></font>
+
+## <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMDBuild</font></font>
+
+[<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMDBuild </font></font>](http://www.cmdbuild.org/)<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;- это веб-среда для настройки пользовательских приложений для управления активами.</font></font>
 
 <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMDBuild позволяет вам конфигурировать модель данных, рабочие процессы, отчеты, информационные панели,&nbsp;</font></font>
 <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> планировать операции и проверки, управлять документами, привязывать ваши ресурсы на картах или просматривать их в 3D-моделях. </font><font style="vertical-align: inherit;">Вы также можете взаимодействовать с внешними решениями через веб-сервисы.</font></font>
 
- _<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">openMAINT</font></font>_
- <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> был сконфигурирован с каркасом CMDBuild, который наследует все </font></font>[<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">основные функции</font></font>](https://www.cmdbuild.org/en/project/features)
+_<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">openMAINT</font></font>_
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> был сконфигурирован с каркасом CMDBuild, который наследует все </font></font>[<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">основные функции</font></font>](https://www.cmdbuild.org/en/project/features)
 <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font>
 </section>
