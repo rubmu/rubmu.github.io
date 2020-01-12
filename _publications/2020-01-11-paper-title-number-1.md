@@ -1,9 +1,9 @@
 ---
 title: "В поиске альтернативных СУБД"
 collection: publications
-permalink: /publication/2020-01-1-paper-title-number-1
+permalink: /publication/2020-01-11-paper-title-number-1
 excerpt: 'Оригинал статьи компании TmaxSoft_Russia.'
-date: 2020-10-01
+date: 2020-10-11
 venue: 'Journal 1'
 paperurl: 'https://habr.com/ru/company/tmaxsoft/blog/360491/'
 citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
