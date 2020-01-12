@@ -1,5 +1,5 @@
 ---
-title: "Построение защищённого NAS, либо "домашнего" мини-сервера"
+title: "Построение защищённого NAS, либо домашнего мини-сервера"
 collection: publications
 permalink: /publication/2020-01-12-paper-title-number-6
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
