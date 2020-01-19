@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "ЕвроХим / БМУ"
+title                    : "ЕХ / БМУ"
 title_separator          : "-"
-name                     : &name "Белореченские минеральные удобрения"
-description              : &description "⚛⚗ A WebApp which displays the qr-code equipment description"
+name                     : &name "Белореченск"
+description              : &description "⚛⚗ A WebApp equipment description"
 url                      : https://rubmu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "rubmu/rubmu.github.io"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "ООО ЕвроХим-БМУ"
+  name             : "ЕХ-БМУ"
   avatar           : "profile.png"
   bio              : "since 1977/07/09"
   location         : "Краснодарский край Россия"
